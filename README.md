@@ -7,11 +7,11 @@ Projeto de um CRUD em aplicação .NET, utilizando WPF.
 Aplicação onstruida com Padrão Arquitetural MVVM. 
 
 
-Pontos da atividade: 
+# **Pontos da atividade:** 
 
-Conceito de DataContext e Binding.
+- Aplorar os conceitos de DataContext e Binding.
 
-Conceito de RelayCommand.
+- Explorar os conceitos de RelayCommand.
 
 
-A linguagem utilizada é C#
+**A linguagem utilizada é C#**
