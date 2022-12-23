@@ -10,6 +10,7 @@ Aplicação onstruida com Padrão Arquitetural MVVM.
 Pontos da atividade: 
 
 Conceito de DataContext e Binding.
+
 Conceito de RelayCommand.
 
 
