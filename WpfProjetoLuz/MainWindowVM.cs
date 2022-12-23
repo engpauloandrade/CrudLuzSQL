@@ -53,16 +53,16 @@ namespace WpfProjetoLuz
 
             Atualizar = new RelayCommand((object _) =>
             {
-                Usuario aux = UsuarioSelecionado.Clone();
+                Usuario usuario = UsuarioSelecionado.Clone();
                 CadastroUsuario telaAtualizar = new CadastroUsuario();
-                telaAtualizar.DataContext = aux;
+                telaAtualizar.DataContext = usuario;
                 bool? verifica = telaAtualizar.ShowDialog();
 
                 if(verifica.HasValue && verifica.Value)
                 {
-                    UsuarioSelecionado.Name = aux.Name;
-                    UsuarioSelecionado.Email = aux.Email;
-                    UsuarioSelecionado.Password = aux.Password;
+                    UsuarioSelecionado.Name = usuario.Name;
+                    UsuarioSelecionado.Email = usuario.Email;
+                    UsuarioSelecionado.Password = usuario.Password;
                 }
                 
             });
