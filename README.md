@@ -15,4 +15,4 @@ Aplicação onstruida com Padrão Arquitetural MVVM.
 
 
 
-> **A linguagem utilizada é C#**
+**A linguagem utilizada é C#**
