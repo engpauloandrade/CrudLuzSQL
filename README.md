@@ -9,9 +9,8 @@ Aplicação onstruida com Padrão Arquitetural MVVM.
 
 Pontos da atividade: 
 
-
-Conceito de DataContext / Binding
-Conceito de RelayCommand
+Conceito de DataContext e Binding.
+Conceito de RelayCommand.
 
 
 A linguagem utilizada é C#
