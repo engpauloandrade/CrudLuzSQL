@@ -1,6 +1,6 @@
 # WPFCrudLuz
 
-## Aplicação WPF
+## **Aplicação WPF**
 
 Projeto de um CRUD em aplicação .NET, utilizando WPF.
 
@@ -14,4 +14,5 @@ Aplicação onstruida com Padrão Arquitetural MVVM.
 - Explorar os conceitos de RelayCommand.
 
 
-**A linguagem utilizada é C#**
+
+> **A linguagem utilizada é C#**
