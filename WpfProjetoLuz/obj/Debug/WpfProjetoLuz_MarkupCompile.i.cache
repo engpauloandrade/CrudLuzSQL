@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Administrator\Desktop\AtividadesLuz\WPF\WpfProjetoLuz\WpfProjetoLuz\obj\Debug\
+C:\Users\Administrator\Desktop\AtividadesLuz\WPF\WPFLuzProjeto\WPFCrudLuz\WpfProjetoLuz\obj\Debug\
 WpfProjetoLuz
 none
 false
 DEBUG;TRACE
-C:\Users\Administrator\Desktop\AtividadesLuz\WPF\WpfProjetoLuz\WpfProjetoLuz\App.xaml
-2-1385891178
+C:\Users\Administrator\Desktop\AtividadesLuz\WPF\WPFLuzProjeto\WPFCrudLuz\WpfProjetoLuz\src\View\App.xaml
+2252977006
 
-102146311542
+1048120417
 14-207034072
-CadastroUsuario.xaml;MainWindow.xaml;
+src\View\CadastroUsuario.xaml;src\View\MainWindow.xaml;
 
 False
 
