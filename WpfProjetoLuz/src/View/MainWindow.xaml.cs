@@ -53,5 +53,12 @@ namespace WpfProjetoLuz
         {
 
         }
+
+        private void Button_btnDataHora(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Data e Hora Atual:\n " + DateTime.Now.ToShortDateString() + " - " +
+            DateTime.Now.ToLongTimeString());
+
+        }
     }
 }
