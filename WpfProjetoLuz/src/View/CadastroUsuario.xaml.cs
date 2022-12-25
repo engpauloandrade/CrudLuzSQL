@@ -38,10 +38,6 @@ namespace WpfProjetoLuz
             e.Handled = Regex.IsMatch(e.Text, "[^0-9]+");
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
 
         private void txtNome_TextChanged(object sender, TextChangedEventArgs e)
         {

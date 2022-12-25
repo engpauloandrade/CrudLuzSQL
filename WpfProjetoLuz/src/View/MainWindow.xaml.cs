@@ -30,23 +30,28 @@ namespace WpfProjetoLuz
             DataContext = new MainWindowVM();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
 
         private void Button_btnSair(object sender, RoutedEventArgs e)
         {
-            if (MessageBox.Show("Deseja Encerrar a Aplicação ?", "Encerrar", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            if (MessageBox.Show("Deseja encerrar a aplicação?", "Encerrar", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
                 Application.Current.Shutdown();
             }
+        }
+
+        private void Button_Inserir(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_btnRemover(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_btnAtualizar(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
