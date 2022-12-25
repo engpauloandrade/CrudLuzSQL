@@ -54,6 +54,7 @@ namespace WpfProjetoLuz
             Atualizar = new RelayCommand((object _) =>
             {
                 Usuario usuario = UsuarioSelecionado.Clone();
+
                 CadastroUsuario telaAtualizar = new CadastroUsuario();
                 telaAtualizar.DataContext = usuario;
                 bool? verifica = telaAtualizar.ShowDialog();

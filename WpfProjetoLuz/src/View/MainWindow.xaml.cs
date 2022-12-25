@@ -39,5 +39,14 @@ namespace WpfProjetoLuz
         {
 
         }
+
+
+        private void Button_btnSair(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Deseja Encerrar a Aplicação ?", "Encerrar", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                Application.Current.Shutdown();
+            }
+        }
     }
 }

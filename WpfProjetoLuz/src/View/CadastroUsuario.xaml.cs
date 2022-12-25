@@ -33,8 +33,32 @@ namespace WpfProjetoLuz
 
         private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
+           
             var textBox = sender as TextBox;
             e.Handled = Regex.IsMatch(e.Text, "[^0-9]+");
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void txtNome_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            //BindingExpression be = (sender as TextBox).GetBindingExpression(TextBox.TextProperty);
+            //be.UpdateSource();
+        }
+
+        private void Button_btnLimpar(object sender, RoutedEventArgs e)
+        {
+            LimparTudo();
+        }
+
+        private void LimparTudo()
+        {
+            txtNome.Text = "";
+            txtEmail.Text = "";
+            txtSenha.Text = "";
         }
     }
 }

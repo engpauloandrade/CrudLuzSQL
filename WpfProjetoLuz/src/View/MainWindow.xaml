@@ -16,9 +16,10 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Inserir" HorizontalAlignment="Left" Command="{Binding Inserir}" Margin="362,377,0,0" VerticalAlignment="Top" Height="27" Width="62" Grid.IsSharedSizeScope="True" Background="#FF47C74F"/>
-        <Button Content="Remover" HorizontalAlignment="Left" Command="{Binding Remover}" Margin="443,377,0,0" VerticalAlignment="Top" Height="27" Width="64" Click="Button_Click" Background="#FFBF4C4C"/>
-        <Button Content="Atualizar" HorizontalAlignment="Left" Command="{Binding Atualizar}" Margin="719,377,0,0" VerticalAlignment="Top" Height="27" Width="62" Grid.IsSharedSizeScope="True" Background="#FF4778C7" Click="Button_Click_1"/>
+        <Button Content="Inserir" HorizontalAlignment="Left" BorderThickness="0" Command="{Binding Inserir}" Margin="362,377,0,0" VerticalAlignment="Top" Height="27" Width="62" Grid.IsSharedSizeScope="True" Background="#FF47C74F"/>
+        <Button Content="Remover" HorizontalAlignment="Left" BorderThickness="0" Command="{Binding Remover}" Margin="443,377,0,0" VerticalAlignment="Top" Height="27" Width="64" Click="Button_Click" Background="#FFBF4C4C"/>
+        <Button Content="Atualizar" HorizontalAlignment="Left" BorderThickness="0" Command="{Binding Atualizar}" Margin="719,377,0,0" VerticalAlignment="Top" Height="27" Width="62" Grid.IsSharedSizeScope="True" Background="#FF4778C7" Click="Button_Click_1"/>
+        <Button Content="Sair" HorizontalAlignment="Left" BorderThickness="0" Margin="581,377,0,0" VerticalAlignment="Top" Height="27" Width="43" Background="#FF941D0A" Foreground="#FFEDDCDC" Click="Button_btnSair"/>
     </Grid>
 </Window>
     

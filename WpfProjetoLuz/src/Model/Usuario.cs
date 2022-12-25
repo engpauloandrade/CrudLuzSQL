@@ -77,8 +77,7 @@ namespace WpfProjetoLuz
         public event PropertyChangedEventHandler PropertyChanged;
         private void RaisePropertyChanged(string prop)
         {
-            if (PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs(prop));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
         }
 
         public Usuario Clone()

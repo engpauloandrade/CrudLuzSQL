@@ -7,10 +7,11 @@
         mc:Ignorable="d"
         Title="CadastroUsuario" Height="450" Width="800">
     <Grid>
-        <TextBox HorizontalAlignment="Center" Style="{StaticResource Estilo_Placeholder}" Tag="Digite seu nome" Margin="0,87,0,0" TextWrapping="Wrap" Text="{Binding Name}" VerticalAlignment="Top" Width="344"/>
-        <TextBox HorizontalAlignment="Center" Style="{StaticResource Estilo_Placeholder}" Tag="Digite seu email" Margin="0,136,0,0" TextWrapping="Wrap" Text="{Binding Email}" VerticalAlignment="Top" Width="344"/>
-        <TextBox HorizontalAlignment="Center" Style="{StaticResource Estilo_Placeholder}" Tag="Digite sua senha" Margin="0,185,0,0" TextWrapping="Wrap" Text="{Binding Password}" VerticalAlignment="Top" Width="344" PreviewTextInput="TextBox_PreviewTextInput"/>
-        <Button Content="Cadastrar" HorizontalAlignment="Left" Margin="228,246,0,0" VerticalAlignment="Top" Width="141" Height="21" Click="Button_btnCadastrar"/>
+        <TextBox Name="txtNome" HorizontalAlignment="Center" Style="{StaticResource Estilo_Placeholder}" Tag="Digite seu nome" Margin="0,87,0,0" TextWrapping="Wrap" Text="{Binding Name}" VerticalAlignment="Top" Width="344"/>
+        <TextBox Name="txtEmail" HorizontalAlignment="Center" Style="{StaticResource Estilo_Placeholder}" Tag="Digite seu email" Margin="0,136,0,0" TextWrapping="Wrap" Text="{Binding Email}" VerticalAlignment="Top" Width="344"/>
+        <TextBox Name="txtSenha" HorizontalAlignment="Center" Style="{StaticResource Estilo_Placeholder}" Tag="Digite sua senha" Margin="0,185,0,0" TextWrapping="Wrap" Text="{Binding Password}" VerticalAlignment="Top" Width="344" PreviewTextInput="TextBox_PreviewTextInput"/>
+        <Button Content="Cadastrar" HorizontalAlignment="Left" Margin="228,246,0,0" VerticalAlignment="Top" Width="141" Height="21" Click="Button_btnCadastrar" Background="#FF58CE55"/>
+        <Button Content="Limpar&#xD;&#xA;" HorizontalAlignment="Left" Margin="464,246,0,0" VerticalAlignment="Top" Height="21" Width="108" Click="Button_btnLimpar" Background="#FF7B8077"/>
 
     </Grid>
 </Window>
