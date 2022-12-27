@@ -35,15 +35,11 @@ namespace WpfProjetoLuz
 
             listaUsuarios = new ObservableCollection<Usuario>(conexao.Listar()) { };
 
-
             IniciaComandos();
-
-            
 
         }
 
         
-
         public void IniciaComandos()
         {
                 
@@ -96,18 +92,15 @@ namespace WpfProjetoLuz
         private void AtualizarLista()
         {
             listaUsuarios.Clear();
-
-            ObservableCollection<Usuario> list = null;
-
             try
             {
-                list = new ObservableCollection<Usuario>(conexao.Listar());
+                List<Usuario> list = new List<Usuario>(conexao.Listar());
                 for (int i = 0; i < list.Count; i++)
                     listaUsuarios.Add(list[i]);
             }
             catch (Exception)
             {
-                MessageBox.Show("Error establishing database connection.\nPlease contact our support team");
+                MessageBox.Show("Algo deu errado!");
                 Application.Current.Shutdown();
             }
         }

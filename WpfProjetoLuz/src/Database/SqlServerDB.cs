@@ -39,7 +39,7 @@ namespace WpfProjetoLuz.src.Database
 
                     comm.ExecuteNonQuery();
                     _Conn.Close();
-                    MessageBox.Show("Registro incluído!");
+                    MessageBox.Show("Cadastro atualizado!");
                 }
 
             }
@@ -63,7 +63,7 @@ namespace WpfProjetoLuz.src.Database
                     SqlCommand _cmd = new SqlCommand("DELETE FROM TB_CADASTRO where Id=" + user.Id + "", _Conn);
                     _cmd.ExecuteNonQuery();
                     _Conn.Close();
-                    MessageBox.Show("Registro incluído !");
+                    MessageBox.Show("Registro excluído!");
                 }
 
             }

@@ -40,21 +40,6 @@ namespace WpfProjetoLuz
             }
         }
 
-        private void Button_Inserir(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void Button_btnRemover(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_btnAtualizar(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void Button_btnDataHora(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Data e Hora Atual:\n " + DateTime.Now.ToShortDateString() + " - " +
@@ -62,14 +47,5 @@ namespace WpfProjetoLuz
 
         }
 
-        private void btnListar_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_btnListar(object sender, RoutedEventArgs e)
-        {
-           
-        }
     }
 }
