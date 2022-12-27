@@ -2,7 +2,7 @@
 
 ## **Aplicação WPF**
 
-Projeto de um CRUD em aplicação .NET, utilizando WPF.
+Projeto de um CRUD em aplicação .NET, utilizando WPF e SQLServer.
 
 Aplicação desenvolvida com Padrão Arquitetural MVVM. 
 
