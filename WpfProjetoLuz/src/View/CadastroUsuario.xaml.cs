@@ -41,8 +41,6 @@ namespace WpfProjetoLuz
 
         private void txtNome_TextChanged(object sender, TextChangedEventArgs e)
         {
-            //BindingExpression be = (sender as TextBox).GetBindingExpression(TextBox.TextProperty);
-            //be.UpdateSource();
         }
 
         private void Button_btnLimpar(object sender, RoutedEventArgs e)

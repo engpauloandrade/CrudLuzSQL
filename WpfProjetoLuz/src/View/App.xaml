@@ -6,6 +6,8 @@
     <Application.Resources>
 
         <ResourceDictionary>
+            <BitmapImage x:Key="luz" UriSource="\assets\luz.jpg" ></BitmapImage>
+            
             <Style x:Key="Estilo_Placeholder" TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type TextBox}}">
                 <Setter Property="Template">
                     <Setter.Value>
@@ -35,8 +37,9 @@
                     </Setter.Value>
                 </Setter>
             </Style>
-            <BitmapImage x:Key="luz" UriSource="assets\luz.jpg" ></BitmapImage>
+
         </ResourceDictionary>
+        
     </Application.Resources>
 
 

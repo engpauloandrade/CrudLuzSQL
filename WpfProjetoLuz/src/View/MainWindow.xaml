@@ -5,22 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfProjetoLuz"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow"  WindowStyle="ThreeDBorderWindow" Background="AntiqueWhite" Height="450" Width="800"
+       >
     <Grid Height="427">
-        <Image Height="202" HorizontalAlignment="Left" Margin="28,76,0,0" Name="image1" Stretch="Uniform" VerticalAlignment="Top" Width="308" Source="\assets\luz.jpg" RenderTransformOrigin="0.507,0.628" />
-        <ListView  ItemsSource="{Binding listaUsuarios}"  SelectedItem="{Binding UsuarioSelecionado}" Margin="362,0,0,74">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn DisplayMemberBinding="{Binding Name}"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Email}"/>
-                </GridView>
-            </ListView.View>
-        </ListView>
+        <Image Height="202" HorizontalAlignment="Left" Margin="28,76,0,0" Name="luz" Stretch="Uniform" VerticalAlignment="Top" Width="308" Source="src\assets\luz.jpg" RenderTransformOrigin="0.507,0.628" />
+        <DataGrid AutoGenerateColumns="false" ItemsSource="{Binding listaUsuarios}" CanUserResizeRows="False" SelectedItem="{Binding UsuarioSelecionado}" Margin="362,0,0,74"  Name="dtgCadastro">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="txtId" Binding="{Binding Path=Id}" Header="Id" Width="120" IsReadOnly="True" />
+                <DataGridTextColumn x:Name="txtNome" Binding="{Binding Path=Name}" Header="Nome" Width="120" IsReadOnly="True" />
+                <DataGridTextColumn x:Name="txtEmail" Binding="{Binding Path=Email}" Header="Email" Width="110" IsReadOnly="True" />
+            </DataGrid.Columns>
+        </DataGrid>
         <Button Content="Inserir" HorizontalAlignment="Left" BorderThickness="0" Command="{Binding Inserir}" Margin="362,377,0,0" VerticalAlignment="Top" Height="27" Width="62" Click="Button_Inserir" Grid.IsSharedSizeScope="True" Background="#FF47C74F"/>
         <Button Content="Remover" HorizontalAlignment="Left" BorderThickness="0" Command="{Binding Remover}" Margin="443,377,0,0" VerticalAlignment="Top" Height="27" Width="64" Click="Button_btnRemover" Background="#FFBF4C4C"/>
         <Button Content="Atualizar" HorizontalAlignment="Left" BorderThickness="0" Command="{Binding Atualizar}" Margin="719,377,0,0" VerticalAlignment="Top" Height="27" Width="62" Grid.IsSharedSizeScope="True" Background="#FF4778C7" Click="Button_btnAtualizar"/>
         <Button Content="Sair" HorizontalAlignment="Left" BorderThickness="0" Margin="28,377,0,0" VerticalAlignment="Top" Height="27" Width="43" Background="#FF940A0A" Foreground="#FFEADCDC" Click="Button_btnSair"/>
-        <Button Content="Exibir data e hora"  HorizontalAlignment="Left" Margin="556,377,0,0" VerticalAlignment="Top" Height="27" Width="112" Click="Button_btnDataHora" Background="#FF369496" Foreground="#FFF3E9E9"/>
+        <Button Content="Exibir data e hora"  HorizontalAlignment="Left" Margin="106,377,0,0" VerticalAlignment="Top" Height="27" Width="112" Click="Button_btnDataHora" Background="#FF369496" Foreground="#FFF3E9E9"/>
     </Grid>
 </Window>
     

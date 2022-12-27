@@ -16,6 +16,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Text.RegularExpressions;
+using WpfProjetoLuz.src.Database;
 
 namespace WpfProjetoLuz
 {
@@ -41,7 +42,7 @@ namespace WpfProjetoLuz
 
         private void Button_Inserir(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void Button_btnRemover(object sender, RoutedEventArgs e)
@@ -59,6 +60,16 @@ namespace WpfProjetoLuz
             MessageBox.Show("Data e Hora Atual:\n " + DateTime.Now.ToShortDateString() + " - " +
             DateTime.Now.ToLongTimeString());
 
+        }
+
+        private void btnListar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_btnListar(object sender, RoutedEventArgs e)
+        {
+           
         }
     }
 }

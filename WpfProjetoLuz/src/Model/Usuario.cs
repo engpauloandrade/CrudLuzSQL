@@ -12,7 +12,7 @@ namespace WpfProjetoLuz
         private string name;
         private string email;
         private string password;
-        private string id;
+        private int id;
 
         public Usuario()
         {
@@ -34,7 +34,7 @@ namespace WpfProjetoLuz
                 if (name != value)
                 {
                     name = value;
-                    RaisePropertyChanged("Name");
+                    Notificar("Name");
                 }
             }
         }
@@ -47,7 +47,7 @@ namespace WpfProjetoLuz
                 if (email != value)
                 {
                     email = value;
-                    RaisePropertyChanged("Email");
+                    Notificar("Email");
                 }
             }
 
@@ -62,12 +62,12 @@ namespace WpfProjetoLuz
                 if (password != value)
                 {
                     password = value;
-                    RaisePropertyChanged("Password");
+                    Notificar("Password");
                 }
             }
         }
 
-        public string Id
+        public int Id
         {
             get { return id; }
             set { id = value; }
@@ -75,7 +75,7 @@ namespace WpfProjetoLuz
 
         //-- implementação da interface INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
-        private void RaisePropertyChanged(string prop)
+        private void Notificar(string prop)
         {
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
         }
