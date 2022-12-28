@@ -6,7 +6,7 @@ Projeto de um CRUD em aplicação .NET, utilizando WPF e SQLServer.
 
 Aplicação desenvolvida com Padrão Arquitetural MVVM. 
 
-Para o banco de dados, você pode criar uma tabela teste utlizando:
+Para o banco de dados SQL Server, você pode criar uma tabela teste utlizando:
 ```
 CREATE TABLE TB_CADASTRO (
 [Id] INT IDENTITY (1,1) NOT NULL,
