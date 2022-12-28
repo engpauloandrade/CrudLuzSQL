@@ -52,8 +52,7 @@ namespace WpfProjetoLuz
 
                 if (verifica.HasValue && verifica.Value)
                 {
-                    conexao.Inserir(userCadastro);
-                    
+                    conexao.Inserir(userCadastro);   
                 }
                 AtualizarLista();
             });
@@ -61,11 +60,16 @@ namespace WpfProjetoLuz
 
             Remover = new RelayCommand((object _) =>
             {
-                Usuario usuario = UsuarioSelecionado;
-                conexao.Deletar(usuario);
+            if (UsuarioSelecionado != null)
+                {
+                    Usuario usuario = UsuarioSelecionado;
+                    conexao.Deletar(usuario);
+                } 
+            else
+                {
+                    MessageBox.Show("Selecione um registro!");
+                }
                 AtualizarLista();
-
-
             });
 
 
