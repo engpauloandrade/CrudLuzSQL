@@ -75,20 +75,28 @@ namespace WpfProjetoLuz
 
             Atualizar = new RelayCommand((object _) =>
             {
-                Usuario usuario = UsuarioSelecionado.Clone();
-
-                CadastroUsuario telaAtualizar = new CadastroUsuario();
-                telaAtualizar.DataContext = usuario;
-                bool? verifica = telaAtualizar.ShowDialog();
-
-                if(verifica.HasValue && verifica.Value)
+                if (UsuarioSelecionado != null)
                 {
-                    UsuarioSelecionado.Name = usuario.Name;
-                    UsuarioSelecionado.Email = usuario.Email;
-                    UsuarioSelecionado.Password = usuario.Password;
+                    Usuario usuario = UsuarioSelecionado.Clone();
 
-                    conexao.Atualizar(UsuarioSelecionado);
+                    CadastroUsuario telaAtualizar = new CadastroUsuario();
+                    telaAtualizar.DataContext = usuario;
+                    bool? verifica = telaAtualizar.ShowDialog();
+
+                    if (verifica.HasValue && verifica.Value)
+                    {
+                        UsuarioSelecionado.Name = usuario.Name;
+                        UsuarioSelecionado.Email = usuario.Email;
+                        UsuarioSelecionado.Password = usuario.Password;
+
+                        conexao.Atualizar(UsuarioSelecionado);
+                    }
+                } 
+                else
+                {
+                    MessageBox.Show("Selecione um registro!");
                 }
+
                 AtualizarLista();
             });
         }
