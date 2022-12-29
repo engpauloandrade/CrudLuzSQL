@@ -51,7 +51,6 @@ namespace WpfProjetoLuz.teste
         [Fact]
         public void Inserindo_Um_Usuario()
         {
-
             // Organizar
             var mock = new Mock<IDatabase>();
             mock.Setup(x => x.Inserir(It.IsAny<Usuario>()));
@@ -69,13 +68,13 @@ namespace WpfProjetoLuz.teste
         {
             // Organizar
             var mock = new Mock<IDatabase>();
-            mock.Setup(repo => repo.Atualizar(It.IsAny<Usuario>()));
+            mock.Setup(x => x.Atualizar(It.IsAny<Usuario>()));
 
             // Agir
             mock.Object.Atualizar(new Usuario { Id = 1, Name = "Paulo", Email = "teste@gmail.com" });
 
             // Declarar
-            mock.Verify(repo => repo.Atualizar(It.IsAny<Usuario>()), Times.Once());
+            mock.Verify(x => x.Atualizar(It.IsAny<Usuario>()), Times.Once());
         }
 
     }
