@@ -74,7 +74,7 @@ namespace WpfProjetoLuz.teste
             mock.Object.Atualizar(new Usuario { Id = 1, Name = "Paulo", Email = "teste@gmail.com" });
 
             // Declarar
-            mock.Verify(x => x.Atualizar(It.IsAny<Usuario>()), Times.Once());
+            mock.Verify(y => y.Atualizar(It.IsAny<Usuario>()), Times.Once());
         }
 
     }
