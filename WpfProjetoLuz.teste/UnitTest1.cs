@@ -22,15 +22,15 @@ namespace WpfProjetoLuz.teste
                 .Returns(new List<Usuario>
                 {
                     new Usuario { Id = 1, Name = "Paulo", Email = "paulo@gmail.com" },
-                    new Usuario { Id = 2, Name = "Natalia", Email = "teste@example.com" }
+                    new Usuario { Id = 2, Name = "Natalia", Email = "teste@examplo.com" }
                 });
 
             // Agir
-            var result = mock.Object.Listar();
+            var resultado = mock.Object.Listar();
 
             // Declarar
-            Assert.IsType<List<Usuario>>(result);
-            Assert.Equal(2, result.Count);
+            Assert.IsType<List<Usuario>>(resultado);
+            Assert.Equal(2, resultado.Count);
 
         }
 

@@ -18,6 +18,7 @@ namespace WpfProjetoLuz.src.Database
         public readonly string _strinConexao;
         private SqlDataReader ler;
         private SqlCommand cmd;
+
         public SqlServerDB()
         {
             _strinConexao = ConfigurationManager.ConnectionStrings["SQLConnection"].ConnectionString;
