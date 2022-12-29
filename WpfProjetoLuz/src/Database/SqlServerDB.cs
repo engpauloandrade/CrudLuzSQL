@@ -15,7 +15,7 @@ namespace WpfProjetoLuz.src.Database
 {
     public class SqlServerDB : IDatabase
     {
-        private readonly string _strinConexao;
+        public readonly string _strinConexao;
         private SqlDataReader ler;
         private SqlCommand cmd;
         public SqlServerDB()

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WpfProjetoLuz.src.Database
 {
-    internal interface IDatabase
+    public interface IDatabase
     {
         List<Usuario> Listar();
         void Inserir(Usuario user);

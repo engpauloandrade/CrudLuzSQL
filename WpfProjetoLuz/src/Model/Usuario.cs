@@ -19,8 +19,9 @@ namespace WpfProjetoLuz
 
         }
 
-        public Usuario(string name, string email, string password)
+        public Usuario(int id, string name, string email, string password)
         {
+            this.id = id;
             this.name = name;
             this.email = email;
             this.password = password;
@@ -70,7 +71,14 @@ namespace WpfProjetoLuz
         public int Id
         {
             get { return id; }
-            set { id = value; }
+            set
+            {
+                if (id != value)
+                {
+                    id = value;
+                    Notificar("Id");
+                }
+            }
         }
 
         //-- implementação da interface INotifyPropertyChanged
