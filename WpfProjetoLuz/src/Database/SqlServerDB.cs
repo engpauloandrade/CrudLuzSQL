@@ -21,6 +21,7 @@ namespace WpfProjetoLuz.src.Database
 
         public SqlServerDB()
         {
+            //Comentar quando for fazer os testes unitários
             _strinConexao = ConfigurationManager.ConnectionStrings["SQLConnection"].ConnectionString;
         }
 
