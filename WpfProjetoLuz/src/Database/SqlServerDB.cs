@@ -129,11 +129,12 @@ namespace WpfProjetoLuz.src.Database
                     // abre a conexao
                     _Conn.Open();
 
-                    string _Inserir = $@"insert into TB_CADASTRO
-                                         (Nome,Email,Password)
-                                         Values('{user.Name}', '{user.Email}' , '{user.Password}')";
+                    SqlCommand _cmd = new SqlCommand("PR_CADASTRO_INS", _Conn);
+                    _cmd.CommandType = CommandType.StoredProcedure;
 
-                    SqlCommand _cmd = new SqlCommand(_Inserir, _Conn);
+                    _cmd.Parameters.AddWithValue("@Nome",  user.Name);
+                    _cmd.Parameters.AddWithValue("@Email", user.Email);
+                    _cmd.Parameters.AddWithValue("@Password", user.Password);
 
                     _cmd.ExecuteNonQuery();
                     _Conn.Close();
