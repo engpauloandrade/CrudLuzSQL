@@ -35,11 +35,14 @@ namespace WpfProjetoLuz.src.Database
                     // abre a conexao
                     _Conn.Open();
                     
+                    SqlCommand _cmd = new SqlCommand("PR_CADASTRO_UPD", _Conn);
+                    _cmd.CommandType = CommandType.StoredProcedure;
 
-                    SqlCommand comm = new SqlCommand("UPDATE TB_CADASTRO SET Nome='" + user.Name + 
-                                                                "',Email='" + user.Email + "'WHERE Id=" + user.Id + "", _Conn);
+                    _cmd.Parameters.AddWithValue("@Id", user.Id);
+                    _cmd.Parameters.AddWithValue("@Nome", user.Name);
+                    _cmd.Parameters.AddWithValue("@Email", user.Email);
 
-                    comm.ExecuteNonQuery();
+                    _cmd.ExecuteNonQuery();
                     _Conn.Close();
                     MessageBox.Show("Cadastro atualizado!");
                 }
@@ -62,7 +65,11 @@ namespace WpfProjetoLuz.src.Database
                     _Conn.Open();
 
                     // inicializa o comando e a conexão
-                    SqlCommand _cmd = new SqlCommand("DELETE FROM TB_CADASTRO where Id=" + user.Id + "", _Conn);
+                    SqlCommand _cmd = new SqlCommand("PR_CADASTRO_DEL", _Conn);
+                    _cmd.CommandType = CommandType.StoredProcedure;
+
+                    _cmd.Parameters.AddWithValue("@Id", user.Id);
+
                     _cmd.ExecuteNonQuery();
                     _Conn.Close();
                     MessageBox.Show("Registro excluído!");
