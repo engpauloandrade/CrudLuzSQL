@@ -86,20 +86,24 @@ namespace WpfProjetoLuz.src.Database
                     // abre a conexao
                     _Conn.Open();
 
-                    cmd = new SqlCommand("SELECT * FROM TB_CADASTRO", _Conn);
-                    ler = cmd.ExecuteReader();
-                    while (ler.Read())
+                    // inicializa o comando e a conexão
+                    SqlCommand _cmd = new SqlCommand("PR_CADASTRO_SEL", _Conn);
+                    _cmd.CommandType = CommandType.StoredProcedure;
+
+                    using (SqlDataReader reader = _cmd.ExecuteReader())
                     {
-                        Usuario usuario = new Usuario()
+                        while (reader.Read())
                         {
-                            Id = ler.GetInt32(0),
-                            Name = ler.GetString(1),
-                            Email = ler.GetString(2)
-
-                        };
-
-                        listar.Add(usuario);
+                            Usuario usuario = new Usuario()
+                            {
+                                Id = reader.GetInt32(0),
+                                Name = reader.GetString(1),
+                                Email = reader.GetString(2)
+                            };
+                            listar.Add(usuario);
+                        }
                     }
+
                     //fecha a conexao
                     _Conn.Close();      
                 }
